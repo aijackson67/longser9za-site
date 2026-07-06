@@ -41,8 +41,9 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
   background:url("/logo.png") center/contain no-repeat;
 }
 .logo-nav{height:50px}
-.logo-gate{width:150px}
-.logo-hero{width:min(62vw,330px);filter:drop-shadow(0 14px 44px rgba(201,169,97,.16))}
+/* translateX nudges compensate the artwork's left-heavy ink mass (optical centering) */
+.logo-gate{width:150px;transform:translateX(4%)}
+.logo-hero{width:min(62vw,330px);filter:drop-shadow(0 14px 44px rgba(201,169,97,.16));transform:translateX(4%)}
 .logo-foot{width:120px}
 
 /* ---------- ornaments ---------- */
