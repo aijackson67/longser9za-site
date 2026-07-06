@@ -40,10 +40,16 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
   aspect-ratio:570/640;
   background:url("/logo.png") center/contain no-repeat;
 }
-.logo-nav{height:50px}
+.logo-nav{height:58px}
 /* translateX nudges compensate the artwork's left-heavy ink mass (optical centering) */
 .logo-gate{width:150px;transform:translateX(4%)}
-.logo-hero{width:min(62vw,330px);filter:drop-shadow(0 14px 44px rgba(201,169,97,.16));transform:translateX(4%)}
+/* display:block keeps the hero logo on its own centered line at any viewport width */
+.logo-hero{
+  display:block;margin-inline:auto;
+  width:min(62vw,330px);
+  filter:drop-shadow(0 14px 44px rgba(201,169,97,.16));
+  transform:translateX(4%);
+}
 .logo-foot{width:120px}
 
 /* ---------- ornaments ---------- */
@@ -117,7 +123,12 @@ header{
 .nav{
   height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
-.brand{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.brand{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.brand-sep{width:1px;height:30px;background:var(--line);flex-shrink:0}
+.brand-tag{
+  font-size:.8rem;font-weight:500;letter-spacing:.28em;
+  color:var(--muted);
+}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{
   font-size:.86rem;font-weight:500;letter-spacing:.12em;
@@ -501,6 +512,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 44px;background:var(
   .page-hero{padding:calc(var(--header-h) + 64px) 0 48px}
 }
 @media (max-width:480px){
+  .brand-sep,.brand-tag{display:none}
   .hero-cta .btn{width:100%}
   .cta-actions .btn{width:100%}
   .foot-grid{flex-direction:column}
