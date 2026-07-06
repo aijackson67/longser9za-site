@@ -178,6 +178,11 @@ header{
 .nav-links a[aria-current="page"]{color:var(--gold-2)}
 .nav-links .btn{padding:9px 22px;font-size:.82rem}
 .nav-links .btn-primary{color:#14110c}
+.lang{display:flex;align-items:center;gap:9px}
+.lang a{font-size:.82rem;font-weight:500;letter-spacing:.08em;color:var(--muted);transition:color .2s}
+.lang a:hover{color:var(--gold-2)}
+.lang a[aria-current="page"]{color:var(--gold-2);font-weight:700}
+.lang-div{color:var(--line);font-size:.8rem}
 .nav-toggle{
   display:none;background:none;border:none;cursor:pointer;
   width:44px;height:44px;position:relative;z-index:960;

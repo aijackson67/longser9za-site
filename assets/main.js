@@ -54,8 +54,8 @@
   var box = document.getElementById('countdown');
   if (!box) return;
   var targets = [
-    { label: '距離台北微醺・大稻埕場開跑', t: new Date('2026-07-17T00:00:00+08:00').getTime() },
-    { label: '距離台北微醺・圓山花博場開跑', t: new Date('2026-07-24T00:00:00+08:00').getTime() }
+    { label: box.getAttribute('data-label-1') || '距離台北微醺・大稻埕場開跑', t: new Date('2026-07-17T00:00:00+08:00').getTime() },
+    { label: box.getAttribute('data-label-2') || '距離台北微醺・圓山花博場開跑', t: new Date('2026-07-24T00:00:00+08:00').getTime() }
   ];
   var label = document.getElementById('cdLabel');
   var d = document.getElementById('cdD'), h = document.getElementById('cdH'),
