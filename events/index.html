@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>龍蛇酒雜 LONG SER 9 ZA｜聯合酒精路跑・2026 台北微醺</title>
-<meta name="description" content="龍蛇酒雜 LONG SER 9 ZA 聯合酒精路跑——2024 年從台中出發，累計近 4,000 人次、150+ 間次酒吧一起跑過。2026 台北微醺場 7/17–18 大稻埕碼頭、7/24–25 圓山花博登場。">
-<meta property="og:title" content="龍蛇酒雜 LONG SER 9 ZA｜聯合酒精路跑">
-<meta property="og:description" content="我朋友敢，你朋友敢嗎？2026 台北微醺場，7 月開跑。一張票走遍整個街區的風格酒吧。">
+<title>台北場次｜龍蛇酒雜 LONG SER 9 ZA・2026 台北微醺</title>
+<meta name="description" content="2026 台北微醺場次資訊——7/17–18 大稻埕碼頭貨櫃市集（25 間酒吧）、7/24–25 圓山花博貨櫃村（24 間酒吧）。席次有限，售完不補。">
+<meta property="og:title" content="台北場次｜龍蛇酒雜 LONG SER 9 ZA">
+<meta property="og:description" content="7/17–18 大稻埕、7/24–25 圓山花博——兩個週末、49 間酒吧等你開跑。">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://longser9za.com/">
+<meta property="og:url" content="https://longser9za.com/events/">
 <meta name="theme-color" content="#0d0b08">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="canonical" href="https://longser9za.com/">
+<link rel="canonical" href="https://longser9za.com/events/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
@@ -20,17 +20,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "name": "龍蛇酒雜 LONG SER 9 ZA",
-      "url": "https://longser9za.com/",
-      "logo": "https://longser9za.com/logo.png",
-      "email": "hello@longser9za.com",
-      "sameAs": [
-        "https://www.instagram.com/longser9za/",
-        "https://www.threads.com/@longser9za"
-      ]
-    },
     {
       "@type": "Event",
       "name": "龍蛇酒雜 台北微醺・大稻埕場｜聯合酒精路跑",
@@ -74,7 +63,6 @@
 </head>
 <body>
 
-<!-- ===== 年齡確認 ===== -->
 <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
   <div class="age-card">
     <span class="logo-img logo-gate" role="img" aria-label="龍蛇酒雜 LONG SER 9 ZA"></span>
@@ -87,7 +75,6 @@
   </div>
 </div>
 
-<!-- ===== 導覽列 ===== -->
 <header>
   <nav class="nav wrap" aria-label="主選單">
     <a class="brand" href="/" aria-label="龍蛇酒雜 LONG SER 9 ZA — 回到首頁">
@@ -98,7 +85,7 @@
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="/about/">活動介紹</a></li>
-      <li><a href="/events/">台北場次</a></li>
+      <li><a href="/events/" aria-current="page">台北場次</a></li>
       <li><a href="/history/">歷年足跡</a></li>
       <li><a href="/faq/">常見問題</a></li>
       <li><a href="/partner/">品牌合作</a></li>
@@ -107,94 +94,52 @@
   </nav>
 </header>
 
-<!-- ===== Hero ===== -->
-<section class="hero" id="top">
-  <span class="hero-char l" aria-hidden="true">龍</span>
-  <span class="hero-char r" aria-hidden="true">蛇</span>
-  <div class="wrap hero-inner">
-    <span class="eyebrow">Est. 2024・台中發跡・台北登場</span>
-    <h1 class="sr-only">龍蛇酒雜 LONG SER 9 ZA｜聯合酒精路跑</h1>
-    <span class="logo-img logo-hero" role="img" aria-label="龍蛇酒雜 LONG SER 9 ZA"></span>
+<!-- ===== 頁首 ===== -->
+<section class="page-hero">
+  <div class="wrap">
+    <p class="kicker">Taipei 2026</p>
+    <h1>台北微醺・場次資訊</h1>
     <div class="rule-orn" aria-hidden="true"><span class="diamond"></span></div>
-    <p class="slogan">我朋友敢，你朋友敢嗎？</p>
-    <p class="lede">不用跑步，用走的就好——一張票、一只手環，一個晚上走遍整個街區的風格酒吧。2024 年從台中發跡、累計近 4,000 人次跑過的聯合酒精路跑，這個 7 月正式登陸台北。</p>
-    <div class="countdown" id="countdown" hidden>
-      <span class="cd-label" id="cdLabel"></span>
-      <div class="cd-grid" role="timer">
-        <div class="cd-cell"><b id="cdD">--</b><span>天</span></div>
-        <div class="cd-cell"><b id="cdH">--</b><span>時</span></div>
-        <div class="cd-cell"><b id="cdM">--</b><span>分</span></div>
-        <div class="cd-cell"><b id="cdS">--</b><span>秒</span></div>
-      </div>
-    </div>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="https://lin.ee/oYGXbLJ" target="_blank" rel="noopener">立即購票</a>
-      <a class="btn btn-ghost" href="/events/">查看台北場次</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>3,900+</b><span>累計參加人次</span></div>
-      <div class="stat"><b>150+</b><span>合作酒吧場次</span></div>
-      <div class="stat"><b>6</b><span>場酒精路跑</span></div>
-      <div class="stat"><b>2</b><span>大城市開跑</span></div>
-    </div>
+    <p class="lede">兩個週末、兩種街區風景。挑一場，或是兩場都跑。</p>
   </div>
 </section>
 
-<!-- ===== 訊息列 ===== -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>二〇二六・台北微醺</span><span>七月十七日至十八日・大稻埕</span><span>七月二十四日至二十五日・圓山花博</span><span>龍蛇酒雜 LONG SER 9 ZA</span><span>席次有限・售完不補</span>
-    <span>二〇二六・台北微醺</span><span>七月十七日至十八日・大稻埕</span><span>七月二十四日至二十五日・圓山花博</span><span>龍蛇酒雜 LONG SER 9 ZA</span><span>席次有限・售完不補</span>
-  </div>
-</div>
-
-<!-- ===== 導覽卡 ===== -->
-<section class="section">
+<!-- ===== 場次 ===== -->
+<section class="section" style="padding-top:40px">
   <div class="wrap">
-    <div class="center reveal">
-      <p class="kicker">Explore</p>
-      <h2 class="title">探索龍蛇酒雜</h2>
-      <div class="rule-orn" aria-hidden="true"><span class="diamond"></span></div>
+    <div class="events">
+      <article class="event-card reveal">
+        <span class="event-week">Week 1・大稻埕場</span>
+        <div class="event-date">7/17（五）－ 7/18（六）</div>
+        <div class="event-place"><small>集合點</small>大稻埕碼頭貨櫃市集</div>
+        <p class="event-desc">百年街屋與巷弄酒香——<b>25 間合作酒吧</b>藏身老台北最有味道的街區，從碼頭市集一路微醺進大稻埕巷弄。</p>
+      </article>
+      <article class="event-card reveal">
+        <span class="event-week">Week 2・圓山花博場</span>
+        <div class="event-date">7/24（五）－ 7/25（六）</div>
+        <div class="event-place"><small>集合點</small>圓山花博貨櫃村入口</div>
+        <p class="event-desc">城市夜色與現場音樂——<b>24 間合作酒吧</b>串連花博園區與中山商圈，節奏感直接拉滿。</p>
+      </article>
     </div>
-    <div class="teasers">
-      <a class="teaser reveal" href="/about/">
-        <p class="kicker">About</p>
-        <h3>活動介紹</h3>
-        <p>什麼是酒精路跑？亮點、玩法、四步開跑——第一次參加前先看這裡。</p>
-        <span class="more">了解更多 →</span>
-      </a>
-      <a class="teaser reveal" href="/events/">
-        <p class="kicker">Taipei 2026</p>
-        <h3>台北場次</h3>
-        <p>7/17–18 大稻埕、7/24–25 圓山花博——兩個週末、49 間酒吧等你開跑。</p>
-        <span class="more">查看場次 →</span>
-      </a>
-      <a class="teaser reveal" href="/history/">
-        <p class="kicker">Our Journey</p>
-        <h3>歷年足跡</h3>
-        <p>從台中西區的第一杯到台北的貨櫃市集，近 4,000 人次一起跑過的路。</p>
-        <span class="more">回顧歷程 →</span>
-      </a>
-    </div>
+    <p class="event-note">實際活動時間、集合地點與售票資訊，以官方 Instagram 與 LINE 公告為準。</p>
   </div>
 </section>
 
 <!-- ===== CTA ===== -->
-<section class="section section-alt" id="tickets">
+<section class="section section-alt">
   <div class="wrap reveal">
     <div class="cta-box">
-      <h2>準備好開跑了嗎</h2>
-      <p>2026 台北微醺場席次有限，售完不補。揪好你的朋友，我們酒吧見。</p>
+      <h2>席次有限・售完不補</h2>
+      <p>透過官方 LINE 完成購票，活動前將收到報到與集合資訊。第一次參加？先看看玩法與常見問題。</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="https://lin.ee/oYGXbLJ" target="_blank" rel="noopener">LINE 立即購票</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/longser9za/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" href="/about/">怎麼玩</a>
         <a class="btn btn-ghost" href="/faq/">常見問題</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
