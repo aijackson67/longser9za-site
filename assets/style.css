@@ -43,9 +43,8 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
 .logo-nav{height:58px}
 /* translateX nudges compensate the artwork's left-heavy ink mass (optical centering) */
 .logo-gate{width:150px;transform:translateX(4%)}
-/* hero logo is an <img> so drop-shadow traces the PNG alpha (glow follows the
-   brush strokes, not the element box — a background-image + drop-shadow renders
-   as a rectangular box on some mobile browsers). ignite = bulb power-on. */
+/* display:block keeps the hero logo on its own centered line at any viewport width */
+/* ignite: bulb-style power-on — dark to bright with a flicker */
 @keyframes heroIgnite{
   0%{filter:brightness(.15)}
   40%{filter:brightness(.5) drop-shadow(0 0 6px rgba(230,207,150,.15))}
@@ -56,24 +55,14 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
 }
 .logo-hero{
   display:block;margin-inline:auto;
-  width:min(62vw,330px);height:auto;
+  width:min(62vw,330px);
   filter:brightness(1.18) drop-shadow(0 0 16px rgba(230,207,150,.55)) drop-shadow(0 0 42px rgba(201,169,97,.35));
   transform:translateX(4%);
   animation:heroIgnite 2.4s ease-out .3s both;
 }
-/* eyebrow glows via text-shadow (traces glyphs, never a box) + opacity ignite */
-@keyframes eyebrowIgnite{
-  0%{opacity:.12}
-  40%{opacity:.5}
-  50%{opacity:.35}
-  68%{opacity:.95}
-  76%{opacity:.82}
-  100%{opacity:1}
-}
 .hero .eyebrow{
-  color:var(--gold-2);
-  text-shadow:0 0 12px rgba(230,207,150,.55);
-  animation:eyebrowIgnite 2.4s ease-out .3s both;
+  filter:brightness(1.15) drop-shadow(0 0 8px rgba(230,207,150,.45));
+  animation:heroIgnite 2.4s ease-out .3s both;
 }
 .logo-foot{width:120px}
 
