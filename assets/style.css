@@ -43,9 +43,9 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
 .logo-nav{height:58px}
 /* translateX nudges compensate the artwork's left-heavy ink mass (optical centering) */
 .logo-gate{width:150px;transform:translateX(4%)}
-/* display:block keeps the hero logo on its own centered line at any viewport width */
-/* ignite: bulb-style power-on — dark to bright with a flicker; glow traces only
-   the artwork's opaque strokes (drop-shadow follows the alpha channel) */
+/* hero logo is an <img> so drop-shadow traces the PNG alpha (glow follows the
+   brush strokes, not the element box — a background-image + drop-shadow renders
+   as a rectangular box on some mobile browsers). ignite = bulb power-on. */
 @keyframes heroIgnite{
   0%{filter:brightness(.15)}
   40%{filter:brightness(.5) drop-shadow(0 0 6px rgba(230,207,150,.15))}
@@ -56,14 +56,24 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
 }
 .logo-hero{
   display:block;margin-inline:auto;
-  width:min(62vw,330px);
+  width:min(62vw,330px);height:auto;
   filter:brightness(1.18) drop-shadow(0 0 16px rgba(230,207,150,.55)) drop-shadow(0 0 42px rgba(201,169,97,.35));
   transform:translateX(4%);
   animation:heroIgnite 2.4s ease-out .3s both;
 }
+/* eyebrow glows via text-shadow (traces glyphs, never a box) + opacity ignite */
+@keyframes eyebrowIgnite{
+  0%{opacity:.12}
+  40%{opacity:.5}
+  50%{opacity:.35}
+  68%{opacity:.95}
+  76%{opacity:.82}
+  100%{opacity:1}
+}
 .hero .eyebrow{
-  filter:brightness(1.15) drop-shadow(0 0 8px rgba(230,207,150,.45));
-  animation:heroIgnite 2.4s ease-out .3s both;
+  color:var(--gold-2);
+  text-shadow:0 0 12px rgba(230,207,150,.55);
+  animation:eyebrowIgnite 2.4s ease-out .3s both;
 }
 .logo-foot{width:120px}
 
@@ -556,11 +566,21 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 44px;background:var(
   .hero-char{display:none}
   .page-hero{padding:calc(var(--header-h) + 64px) 0 48px}
 }
-@media (max-width:700px){
-  .brand-tag{display:none}
+@media (max-width:560px){
+  /* keep the 30 Bars+ badge and tagline beside the logo on phones, sized down */
+  .logo-nav{height:46px}
+  .brand{gap:9px}
+  .brand-sep{height:26px}
+  .brand-bars .b-num{font-size:1.02rem}
+  .brand-bars .b-word{font-size:.52rem}
+  .brand-tag{gap:2px}
+  .brand-tag .tag-top,.brand-tag .tag-main{font-size:.6rem;letter-spacing:.16em}
+}
+@media (max-width:360px){
+  /* very small phones: drop the tagline, keep logo + 30 Bars+ */
+  .brand-tag,.brand-sep:last-of-type{display:none}
 }
 @media (max-width:480px){
-  .brand-sep,.brand-bars{display:none}
   .hero-cta .btn{width:100%}
   .cta-actions .btn{width:100%}
   .foot-grid{flex-direction:column}
