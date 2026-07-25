@@ -149,14 +149,14 @@ header{
   height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .brand{display:flex;align-items:center;gap:14px;white-space:nowrap}
-.brand-sep{width:1px;height:32px;background:var(--line);flex-shrink:0}
-/* bulb-glow shared by the three brand pieces */
+.brand-sep{width:1px;height:32px;background:rgba(255,140,205,.28);flex-shrink:0}
+/* nav logo breathing glow — 心動篇 edition: pink hue-shift + magenta/violet bloom */
 @keyframes brandGlow{
-  0%,100%{filter:drop-shadow(0 0 6px rgba(230,207,150,.4)) drop-shadow(0 0 18px rgba(201,169,97,.22))}
-  50%{filter:drop-shadow(0 0 11px rgba(230,207,150,.75)) drop-shadow(0 0 30px rgba(201,169,97,.45))}
+  0%,100%{filter:hue-rotate(285deg) saturate(1.5) drop-shadow(0 0 6px rgba(255,140,205,.4)) drop-shadow(0 0 18px rgba(154,92,242,.25))}
+  50%{filter:hue-rotate(285deg) saturate(1.5) drop-shadow(0 0 11px rgba(255,140,205,.75)) drop-shadow(0 0 30px rgba(154,92,242,.5))}
 }
 .brand .logo-nav{
-  filter:drop-shadow(0 0 8px rgba(230,207,150,.5)) drop-shadow(0 0 22px rgba(201,169,97,.3));
+  filter:hue-rotate(285deg) saturate(1.5) drop-shadow(0 0 8px rgba(255,140,205,.5)) drop-shadow(0 0 22px rgba(154,92,242,.32));
   animation:brandGlow 3.4s ease-in-out infinite;
 }
 /* circular badge composition: number over word, no ring */
