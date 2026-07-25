@@ -44,26 +44,37 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
 /* translateX nudges compensate the artwork's left-heavy ink mass (optical centering) */
 .logo-gate{width:150px;transform:translateX(4%)}
 /* display:block keeps the hero logo on its own centered line at any viewport width */
-/* ignite: bulb-style power-on — dark to bright with a flicker */
+/* ignite: bulb-style power-on — 心動篇 edition: gold logo hue-shifted to neon
+   pink (hue-rotate) with magenta/violet bloom */
 @keyframes heroIgnite{
-  0%{filter:brightness(.15)}
-  40%{filter:brightness(.5) drop-shadow(0 0 6px rgba(230,207,150,.15))}
-  50%{filter:brightness(.35) drop-shadow(0 0 4px rgba(230,207,150,.1))}
-  68%{filter:brightness(.95) drop-shadow(0 0 14px rgba(230,207,150,.4))}
-  76%{filter:brightness(.8) drop-shadow(0 0 10px rgba(230,207,150,.3))}
-  100%{filter:brightness(1.18) drop-shadow(0 0 16px rgba(230,207,150,.55)) drop-shadow(0 0 42px rgba(201,169,97,.35))}
+  0%{filter:hue-rotate(285deg) saturate(1.5) brightness(.15)}
+  40%{filter:hue-rotate(285deg) saturate(1.5) brightness(.5) drop-shadow(0 0 6px rgba(255,140,205,.15))}
+  50%{filter:hue-rotate(285deg) saturate(1.5) brightness(.35) drop-shadow(0 0 4px rgba(255,140,205,.1))}
+  68%{filter:hue-rotate(285deg) saturate(1.5) brightness(.95) drop-shadow(0 0 14px rgba(255,140,205,.4))}
+  76%{filter:hue-rotate(285deg) saturate(1.5) brightness(.8) drop-shadow(0 0 10px rgba(255,140,205,.3))}
+  100%{filter:hue-rotate(285deg) saturate(1.5) brightness(1.18) drop-shadow(0 0 16px rgba(255,140,205,.55)) drop-shadow(0 0 42px rgba(154,92,242,.4))}
 }
 .logo-hero{
   display:block;margin-inline:auto;
   width:min(62vw,330px);
-  filter:brightness(1.18) drop-shadow(0 0 16px rgba(230,207,150,.55)) drop-shadow(0 0 42px rgba(201,169,97,.35));
+  filter:hue-rotate(285deg) saturate(1.5) brightness(1.18) drop-shadow(0 0 16px rgba(255,140,205,.55)) drop-shadow(0 0 42px rgba(154,92,242,.4));
   transform:translateX(4%);
   animation:heroIgnite 2.4s ease-out .3s both;
 }
-.hero .eyebrow{
-  filter:brightness(1.15) drop-shadow(0 0 8px rgba(230,207,150,.45));
-  animation:heroIgnite 2.4s ease-out .3s both;
+@keyframes eyebrowIgnitePink{
+  0%{opacity:.1}
+  40%{opacity:.5}
+  50%{opacity:.35}
+  68%{opacity:.95}
+  76%{opacity:.8}
+  100%{opacity:1}
 }
+.hero .eyebrow{
+  color:#f4b6da;
+  text-shadow:0 0 12px rgba(255,140,205,.45);
+  animation:eyebrowIgnitePink 2.4s ease-out .3s both;
+}
+.hero .eyebrow::before,.hero .eyebrow::after{background:rgba(255,140,205,.28)}
 .logo-foot{width:120px}
 
 /* ---------- ornaments ---------- */
