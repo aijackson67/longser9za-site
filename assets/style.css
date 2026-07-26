@@ -575,6 +575,9 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 44px;background:var(
   .brand-bars .b-word{font-size:.52rem}
   .brand-tag{gap:2px}
   .brand-tag .tag-top,.brand-tag .tag-main{font-size:.6rem;letter-spacing:.16em}
+  /* hero eyebrow: compact tracking + short side rules so it stays on ONE line */
+  .hero .eyebrow{font-size:.68rem;letter-spacing:.2em;gap:10px;white-space:nowrap}
+  .hero .eyebrow::before,.hero .eyebrow::after{width:18px}
 }
 @media (max-width:360px){
   /* very small phones: drop the tagline, keep logo + 30 Bars+ */
