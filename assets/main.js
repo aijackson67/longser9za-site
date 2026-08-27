@@ -83,3 +83,23 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+// 購票點擊追蹤（所有 lin.ee 連結；事件名 buy_click，區分頁面與按鈕位置）
+(function(){
+  if (typeof gtag !== 'function') return;
+  document.querySelectorAll('a[href*="lin.ee"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var area = 'other';
+      if (a.closest('header')) area = 'nav';
+      else if (a.closest('footer')) area = 'footer';
+      else if (a.closest('.cta-box')) area = 'cta_box';
+      else if (a.closest('.hero')) area = 'hero';
+      else if (a.closest('.section')) area = 'section';
+      gtag('event', 'buy_click', {
+        page_path: location.pathname,
+        button_area: area,
+        button_text: (a.textContent || '').trim().slice(0, 40)
+      });
+    });
+  });
+})();
