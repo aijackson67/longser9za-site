@@ -38,7 +38,7 @@ section{scroll-margin-top:calc(var(--header-h) + 16px)}
 .logo-img{
   display:inline-block;
   aspect-ratio:570/640;
-  background:url("/logo.png") center/contain no-repeat;
+  background:url("/logo.webp") center/contain no-repeat;
 }
 .logo-nav{height:58px}
 /* translateX nudges compensate the artwork's left-heavy ink mass (optical centering) */
