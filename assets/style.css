@@ -596,6 +596,25 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 44px;background:var(
   .reveal{opacity:1;transform:none}
 }
 
+/* ---------- partner logo marquee ---------- */
+.logo-marquee{
+  position:relative;overflow:hidden;
+  margin:56px 0 0;padding:28px 0;
+  border-block:1px solid var(--line-soft);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+}
+.lm-track{
+  display:flex;align-items:center;width:max-content;
+  animation:lmScroll 48s linear infinite;
+}
+.logo-marquee:hover .lm-track{animation-play-state:paused}
+.lm-track img{
+  height:36px;width:auto;max-width:170px;object-fit:contain;
+  margin-right:76px;flex-shrink:0;opacity:.88;
+}
+@keyframes lmScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
 /* ---------- partners (歷年合作品牌) ---------- */
 .sp-wall{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -652,4 +671,6 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 44px;background:var(
   .sp-btn{min-height:104px;padding:18px 10px}
   .sp-btn .sp-mark{font-size:.94rem}
   .sp-tl-head{margin-top:56px}
+  .logo-marquee{margin-top:40px;padding:22px 0}
+  .lm-track img{height:28px;max-width:130px;margin-right:48px}
 }
