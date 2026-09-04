@@ -103,3 +103,35 @@
     });
   });
 })();
+
+// 合作品牌篩選（品牌合作頁：點 logo 牆的品牌，時間軸只亮它參與過的場次）
+(function(){
+  var wall = document.getElementById('spWall');
+  var tl = document.getElementById('spTimeline');
+  if (!wall || !tl) return;
+  var btns = wall.querySelectorAll('.sp-btn');
+  var reset = document.getElementById('spReset');
+  var cur = null;
+  function apply(id){
+    btns.forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-brand') === id ? 'true' : 'false');
+    });
+    tl.classList.toggle('sp-filtering', !!id);
+    tl.querySelectorAll('.chip').forEach(function(c){
+      c.classList.toggle('hit', c.getAttribute('data-brand') === id);
+    });
+    tl.querySelectorAll('.t-item').forEach(function(it){
+      it.classList.toggle('hit', !!id && !!it.querySelector('.chip[data-brand="' + id + '"]'));
+    });
+    if (reset) reset.hidden = !id;
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var id = b.getAttribute('data-brand');
+      cur = (cur === id) ? null : id;
+      apply(cur);
+      if (cur && typeof gtag === 'function') gtag('event', 'sponsor_click', { brand: cur, page_path: location.pathname });
+    });
+  });
+  if (reset) reset.addEventListener('click', function(){ cur = null; apply(null); });
+})();
