@@ -637,6 +637,7 @@ footer{border-top:1px solid var(--line-soft);padding:64px 0 44px;background:var(
 }
 /* when a logo file is supplied: <img class="sp-logo" src="/assets/sponsors/x.png" alt="Brand"> replaces .sp-mark */
 .sp-btn .sp-logo{max-height:60px;width:auto;max-width:76%;object-fit:contain}
+.sp-btn .sp-logo.tall{max-height:88px}
 @media (max-width:860px){
   .sp-wall{grid-template-columns:repeat(2,1fr)}
   .sp-btn{min-height:112px;padding:18px 10px}
